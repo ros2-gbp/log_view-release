@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>log_view</name>
+  <version>0.2.4</version>
+  <description>
+    The log_view package provides a ncurses based terminal GUI for
+    viewing and filtering published ROS log messages.
+
+    This is an alternative to rqt_console and swri_console that doesn't depend
+    on qt and can be run directly in a terminal.
+  </description>
+
+  <author email="marcalban@hatchbed.com">Marc Alban</author>
+  <maintainer email="marcalban@hatchbed.com">Marc Alban</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rcl_interfaces</depend>
+  <depend>libncurses-dev</depend>
+
+  <exec_depend>xclip</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>
