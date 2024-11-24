@@ -1,0 +1,13 @@
+Source: ros-iron-log-view
+Section: misc
+Priority: optional
+Maintainer: Marc Alban <marcalban@hatchbed.com>
+Build-Depends: debhelper (>= 9.0.0), libncurses-dev, ros-iron-ament-cmake, ros-iron-ament-lint-auto <!nocheck>, ros-iron-ament-lint-common <!nocheck>, ros-iron-rcl-interfaces, ros-iron-rclcpp, ros-iron-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-iron-log-view
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libncurses-dev, ros-iron-rcl-interfaces, ros-iron-rclcpp, xclip, ros-iron-ros-workspace
+Description: The log_view package provides a ncurses based terminal GUI for viewing and filtering published ROS log messages.
+ This is an alternative to rqt_console and swri_console that doesn't depend on qt and can be run directly in a terminal.
