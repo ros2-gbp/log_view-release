@@ -31,12 +31,14 @@
 #include <curses.h>
 #include <panel.h>
 
+#include <memory>
 #include <vector>
 
 #include <rclcpp/rclcpp.hpp>
 
 #include <log_view/log_filter.h>
 #include <log_view/log_store.h>
+#include <log_view/log_writer.h>
 #include <log_view/panel_interface.h>
 #include <log_view/panels/details_panel.h>
 #include <log_view/panels/exclude_panel.h>
@@ -45,8 +47,10 @@
 #include <log_view/panels/level_panel.h>
 #include <log_view/panels/log_panel.h>
 #include <log_view/panels/node_panel.h>
+#include <log_view/panels/prefs_panel.h>
 #include <log_view/panels/search_panel.h>
 #include <log_view/panels/status_panel.h>
+#include <log_view/preferences.h>
 
 namespace log_view {
 
@@ -73,15 +77,23 @@ private:
   void tab();
   void focusNext(const PanelInterfacePtr& panel);
   void unfocusOthers(const PanelInterfacePtr& focused);
+  void openConfirmClear();
+  void closeConfirmClear();
 
   LogStorePtr logs_;
   LogFilter log_filter_;
+  Preferences prefs_;
+  std::unique_ptr<LogWriter> log_writer_;
 
   bool exited_ = false;
   bool mouse_down_ = false;
+  bool confirm_clear_ = false;
 
   bool node_select_ = true;
   bool log_scroll_ = false;
+
+  WINDOW* confirm_win_ = nullptr;
+  PANEL* confirm_panel_ = nullptr;
 
   std::vector<PanelInterfacePtr> panels_;
   DetailsPanelPtr details_panel_;
@@ -93,6 +105,7 @@ private:
   LogPanelPtr log_panel_;
   NodePanelPtr node_panel_;
   HelpPanelPtr help_panel_;
+  PrefsPanelPtr prefs_panel_;
 };
 
 }  // namespace log_view
