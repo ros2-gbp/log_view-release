@@ -1,3 +1,26 @@
+## log_view (rolling) - 0.3.3-2
+
+The packages in the `log_view` repository were released into the `rolling` distro by running `/home/malban/.local/bin/bloom-release --rosdistro rolling --track rolling log_view` on `Wed, 20 May 2026 19:40:18 -0000`
+
+The `log_view` package was released.
+
+Version of package(s) in repository `log_view`:
+
+- upstream repository: https://github.com/hatchbed/log_view.git
+- release repository: https://github.com/ros2-gbp/log_view-release.git
+- rosdistro version: `0.3.2-1`
+- old version: `0.3.3-1`
+- new version: `0.3.3-2`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## log_view (rolling) - 0.3.3-1
 
 The packages in the `log_view` repository were released into the `rolling` distro by running `/home/malban/.local/bin/bloom-release --rosdistro rolling --track rolling log_view` on `Wed, 20 May 2026 18:40:31 -0000`
