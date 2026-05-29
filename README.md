@@ -1,3 +1,26 @@
+## log_view (jazzy) - 0.5.0-1
+
+The packages in the `log_view` repository were released into the `jazzy` distro by running `/home/malban/.local/bin/bloom-release --rosdistro jazzy --track jazzy log_view` on `Fri, 29 May 2026 02:15:00 -0000`
+
+The `log_view` package was released.
+
+Version of package(s) in repository `log_view`:
+
+- upstream repository: https://github.com/hatchbed/log_view.git
+- release repository: https://github.com/ros2-gbp/log_view-release.git
+- rosdistro version: `0.4.0-1`
+- old version: `0.4.0-1`
+- new version: `0.5.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## log_view (rolling) - 0.5.0-1
 
 The packages in the `log_view` repository were released into the `rolling` distro by running `/home/malban/.local/bin/bloom-release --rosdistro rolling --track rolling log_view` on `Thu, 28 May 2026 23:52:30 -0000`
